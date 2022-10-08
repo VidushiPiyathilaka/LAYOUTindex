@@ -1,11 +1,11 @@
 
-SELECT email, phone
-FROM Contacts
+1. SELECT email, phone
+   FROM Contacts
 
-SELECT COUNT(groupId)
-FROM Users
+2. SELECT COUNT(groupId)
+   FROM Users
 
-SELECT Customers.customerName, Orders.orderId, Orders.orderDate
-FROM Customers
-INNER JOIN Orders
-ON Customers.customerId = Orders.customerId
+3. SELECT Customers.customerName, Orders.orderId, Orders.orderDate
+   FROM Customers
+   INNER JOIN Orders
+   ON Customers.customerId = Orders.customerId

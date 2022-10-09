@@ -1,11 +1,12 @@
 
-1. SELECT email, phone
+1. SELECT *
    FROM Contacts
+   WHERE email AND phone IS NULL;
 
 2. SELECT COUNT(groupId)
-   FROM Users
+   FROM Users;
 
 3. SELECT Customers.customerName, Orders.orderId, Orders.orderDate
    FROM Customers
    INNER JOIN Orders
-   ON Customers.customerId = Orders.customerId
+   ON Customers.customerId = Orders.customerId;

@@ -8,13 +8,22 @@
 	"item": [
 		{
 			"name": "CreateToken",
-			"id": "fa39b73a-689b-46dc-9cd6-fdeba969beba",
+			"id": "5354881b-3043-45f5-8fde-edde5edeb15e",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\" : \"admin\",\n    \"password\" : \"password123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "https://restful-booker.herokuapp.com/auth",
 					"protocol": "https",
@@ -64,7 +73,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://restful-booker.herokuapp.com/booking/137",
+					"raw": "https://restful-booker.herokuapp.com/booking/5554",
 					"protocol": "https",
 					"host": [
 						"restful-booker",
@@ -73,7 +82,7 @@
 					],
 					"path": [
 						"booking",
-						"137"
+						"5554"
 					]
 				}
 			},
@@ -121,8 +130,17 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\" : \"James\",\n    \"lastname\" : \"Brown\",\n    \"totalprice\" : 111,\n    \"depositpaid\" : true,\n    \"bookingdates\" : {\n        \"checkin\" : \"2018-01-01\",\n        \"checkout\" : \"2019-01-01\"\n    },\n    \"additionalneeds\" : \"Breakfast\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
-					"raw": "https://restful-booker.herokuapp.com/booking/187",
+					"raw": "https://restful-booker.herokuapp.com/booking/:id",
 					"protocol": "https",
 					"host": [
 						"restful-booker",
@@ -131,7 +149,13 @@
 					],
 					"path": [
 						"booking",
-						"187"
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
 					]
 				}
 			},
